@@ -10,7 +10,7 @@ body {
   width: 1000px;
 }
 
-.tabs {
+.tabs, .clock {
   width: 40%;
 }
 
@@ -35,7 +35,18 @@ body {
   justify-content: space-around;
 }
 
-.tabs article {
+.tabs article, .clock {
   border: 2px solid black;
   text-align: center;
+}
+
+.clock {
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.clock-right {
+  text-align: right;
 }
