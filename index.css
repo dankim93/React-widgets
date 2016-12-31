@@ -14,6 +14,10 @@ body {
   width: 40%;
 }
 
+.tabs {
+  margin-top: 30px;
+}
+
 .tabs h1 {
   border: 2px solid black;
   border-top-right-radius: 10px;
@@ -24,9 +28,14 @@ body {
   text-align: center;
 }
 
+.tabs h1.selected {
+  background-color: green;
+}
+
 .tabs h1:hover {
-  background: blue;
+  background: green;
   cursor: pointer;
+  /*opacity: 0.;*/
 }
 
 .tabs ul {
@@ -38,6 +47,11 @@ body {
 .tabs article, .clock {
   border: 2px solid black;
   text-align: center;
+}
+
+.tabs article {
+  height: 50px;
+
 }
 
 .clock {

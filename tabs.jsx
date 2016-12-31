@@ -11,12 +11,16 @@ class Tabs extends React.Component{
   }
 
   render() {
-    const tabHeaders = this.props.tabs.map((tab, idx) => (
-      <h1 key={tab.title}
-        onClick={this.setIndex.bind(this, idx)}>
-        {tab.title}
-      </h1>
-    ));
+    const tabHeaders = this.props.tabs.map((tab, idx) => {
+      let klass = this.state.index === idx ? "selected" : "";
+      return (
+          <h1 className={klass}
+              key={tab.title}
+              onClick={this.setIndex.bind(this, idx)}>
+            {tab.title}
+          </h1>
+        );
+    });
     const content = this.props.tabs[this.state.index].content;
     return (
       <div className="tabs">
